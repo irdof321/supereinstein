@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>40</y>
+      <w>330</w>
+      <h>780</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;namespace&gt;&gt;
+UtilityGame
+--
+{innerclass
+&lt;&lt;enum&gt;&gt; UiEvent 
+a
+d
+A
+D
+space
+esc
+no
+innerclass}
+{innerclass
+&lt;&lt;enum&gt;&gt; stateOfPersonn 
+stay
+walkRight
+walkLeft
+jumpRight
+jumpLeft
+jumpFace
+deadSate
+innerclass}
+{innerclass
+&lt;&lt;enum&gt;&gt; element
+HoleElem
+underFloorElem
+FloorElem
+BoxElem
+Bot
+Einstein
+Newton
+Object
+innerclass}
+{innerclass
+&lt;&lt;enum&gt;&gt;difficulty
+easy
+medium
+hard
+innerclass}
+{innerclass
+&lt;&lt;enum&gt;&gt;direction
+left
+right
+innerclass}
+{innerclass
+type=actclass
+Matrix
+--
+- _matrix : vector&lt;vector&lt;: int&gt;&gt;
+- _row : int
+- _line : int
+--
++ Matrix (l : int, r : int) : Matrix
++ setElem(r : int, l : int, nb : int) : void
++ getElem(r : int, l : int) : int
++ setMatrixFromTxt(filename : QString) : void
++ operator[] (l : int) : vector&lt;int&gt;&amp;
++ size() : vector&lt;: int&gt;
+innerclass}
+bg=yellow
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

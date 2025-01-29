@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>184</x>
+      <y>112</y>
+      <w>288</w>
+      <h>424</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+- _music : QSoundEffect*
+- _timer : QTimer*
+- _pTouchTimer : QTimer*
+- _data :  Data
+- _inView : InputView*
+- _task : UiEvent
+- _outView : OutputView*
+- YMaxJump : float
+- _onMenu : bool
+--
+- executionOfTask() : void
+- movePersonnLeft(move : int) : void
+- movePersonnRight(move : int) : void
+- PlayCanJump() : bool
+- PersonnCanMove(p : Personn*, keyMove : UiEvent)
+- gravity() : void
+- IAControlBot() : void
++ Controller() : Controller
++ show() : void
+--
+&lt;&lt;SLOTS&gt;&gt;
++ integrate() : void
++ setTask() : void
++ start() : void
++ setVolume(: int) : void
++ playerIsNoTouch() : void
++ end() : void
+--
+&lt;&lt;SIGNAL&gt;&gt;
++ sendUpdate() : void
++ showMenu() : void
++ gameOver() : void
++ sigEnd() : void
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>648</x>
+      <y>616</y>
+      <w>216</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>Data
+-
+- _inGame : std::vector&lt;BaseElem*&gt;*
+-  _player : Player*
+- _element : Matrix*
+- _bots : std::vector&lt;MiniBot*&gt;*
+--
++Data(parent : QObject) : Data
++ getPlayer() : Player*
++ getBaseElem() : std::vector&lt;BaseElem*&gt;
++ getBot() : std::vector&lt;MiniBot*&gt;
++ playerFall() : void
++ BotIsDead (i : int ) : void
+--
+&lt;&lt;SLOTS&gt;&gt;
++ dataUpdate() : void
++ reset() : void
++ init(d : difficulty) : void
+--
+&lt;&lt;SIGNAL&gt;&gt;
+- sigUpdate() : void
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>112</y>
+      <w>304</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>OutPutView
+--
+- _data : Data*
+- _Font : QPixmap*
+- _menu :Menu*
+- _heart : QPixmap*
+-_onMenu : bool
+- _showgameOver : bool
+- _gameoverPisxmap : QPixmap*
+- _touch : QLabel*
+- _timer : QTimer*
+- _scaleXFromBeg : double
+- _scaleXFromBeg : double
+--
++ OutputView(data : Data*, parent : QWidget) : OutputView
++ keyPressEvent(e : QKeyEvent) : void
++ keyReleaseEvent(e : QKeyEvent) : void
+# paintEvent( event : QPaintEvent*) : void
+--
+&lt;&lt;SLOTS&gt;&gt;
++ sloStart() : void
++ showMenu() : void
++ gameOver() : void
+--
+&lt;&lt;SIGNAL&gt;&gt;
++ sigKeyPressed(QKeyEvent*) : void
++ sigKeyRleased(QKeyEvent*) : void
++ sigStart() : void
++ volume(int) : void
++ sigShowMenu() : void
++ sigDiff(UtilityGame::difficulty d) : void
++ sigReset() : void
++ sigEnd() : void
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>664</y>
+      <w>216</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>InputView
+--
++ InputView(parent : QWidget) : InputView
+- keyPressEvent(e : QKeyEvent) : void
+- keyReleaseEvent(e : QKeyEvent) : void
+--
++ sloKeyPressed(e : QKeyEvent) : void
++ sloKeyReleased(e : QKeyEvent) : void
+--
+&lt;&lt;SIGNAL&gt;&gt;
++ UpPushed (: UiEvent) : void
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>528</y>
+      <w>416</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>500.0;110.0;500.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>464</x>
+      <y>296</y>
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>528</y>
+      <w>24</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>768</x>
+      <y>504</y>
+      <w>24</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>896</x>
+      <y>112</y>
+      <w>216</w>
+      <h>448</h>
+    </coordinates>
+    <panel_attributes>menu
+--
+- _start : QPushButton*
+- _showCommand : QPushButton*
+- _reset : QPushButton*
+- _sound : QSlider*
+- _difLab : QLabel*
+- _mediumLab : QLabel*
+- _hardLab : QLabel*
+- _easy : QCheckBox*
+- _medium : QCheckBox*
+- _hard : QCheckBox*
+- _diffIsChoose : bool
+- _listCommand : QLabel*
+- _ endLab : QLabel*
+- _menuIsShow : bool
+--
++ Menu(parent : QWidget) : Menu
++ setDiffIsChoose(b : bool) : void
+--
+&lt;&lt;SLOTS&gt;&gt;
++ sloStart() : void
++	volumeChanged() : void
++ showMenu() : void
++ diffIschoose(d : difficulty) : void
++ easy() : void
++ medium() : void
++ hard() : void
++ update(sx : double , sy : double) : void
++ sloReset() : void
++ end() : void
+--
+&lt;&lt;SIGNAL&gt;&gt;
++ sigStart() : void
++ volume(: int) : void
++ sigDiff (d : difficulty) : void
++ sigReset() : void
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>320</y>
+      <w>56</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

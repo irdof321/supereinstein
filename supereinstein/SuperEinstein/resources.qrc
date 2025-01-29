@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/">
+        <file>texture/object/Floor1.png</file>
+		<file>texture/icon.png</file>
+        <file>texture/object/underFloor.png</file>
+        <file>texture/object/Box.png</file>
+        <file>texture/object/Floor1test.png</file>
+        <file>texture/fontObject/font.png</file>
+        <file>texture/personn/marcheback.gif</file>
+		<file>texture/personn/botDead.gif</file>
+        <file>texture/personn/SuperEinsteinFace.gif</file>
+        <file>texture/personn/SuperEinsteinmarche.gif</file>
+        <file>texture/personn/SuperEinsteinSaut.gif</file>
+        <file>texture/personn/SuperEinsteinSautBack.gif</file>
+        <file>texture/personn/SuperEinsteinSautFace.gif</file>
+        <file>texture/personn/minibotMarche.gif</file>
+        <file>texture/personn/minibotMarcheBack.gif</file>
+		<file>texture/personn/excla.gif</file>
+        <file>texture/personn/heart.png</file>
+		<file>texture/personn/newtonRight.gif</file>
+		<file>texture/personn/newtonLeft.gif</file>
+		<file>texture/personn/NewtonFace.gif</file>
+        <file>texture/menu/GameOver.png</file>
+		<file>texture/menu/end.gif</file>
+        <file>texture/menu/CommandMenu.png</file>
+        <file>music/music1.wav</file>
+        <file>music/music2.wav</file>
+        <file>music/music3.wav</file>
+        <file>sound/einsteinWalk.wav</file>
+        <file>level/easy.txt</file>
+        <file>level/medium.txt</file>
+        <file>level/hard.txt</file>
+        <file>level/testMode.txt</file>
+    </qresource>
+</RCC>

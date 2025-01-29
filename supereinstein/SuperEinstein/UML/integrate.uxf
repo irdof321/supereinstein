@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>220</x>
+      <y>22</y>
+      <w>121</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>__timer : QTimer*_
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>55</y>
+      <w>154</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+timeout() : void</panel_attributes>
+    <additional_attributes>10.0;40.0;30.0;40.0;30.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>99</y>
+      <w>198</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+integrate() : void</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>44</y>
+      <w>33</w>
+      <h>693</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;610.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>440</x>
+      <y>110</y>
+      <w>22</w>
+      <h>693</h>
+    </coordinates>
+    <panel_attributes>bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>44</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>363</x>
+      <y>22</y>
+      <w>165</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>_w : Controller_
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>99</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getPlayer() : Player*</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>627</x>
+      <y>22</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>__data : Data*_
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>814</x>
+      <y>22</y>
+      <w>121</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>__player : Player_
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1012</x>
+      <y>22</y>
+      <w>198</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>__bots : vector&lt;MiniBot*&gt;*_
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>44</y>
+      <w>33</w>
+      <h>814</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;720.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>869</x>
+      <y>44</y>
+      <w>33</w>
+      <h>825</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;730.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1111</x>
+      <y>44</y>
+      <w>33</w>
+      <h>770</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;680.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>121</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+_player</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>143</y>
+      <w>451</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getLife() : int</panel_attributes>
+    <additional_attributes>390.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>165</y>
+      <w>451</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+_life</panel_attributes>
+    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>198</y>
+      <w>220</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+executionOfTask() : void</panel_attributes>
+    <additional_attributes>10.0;40.0;30.0;40.0;30.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>253</y>
+      <w>451</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+isJumping : bool</panel_attributes>
+    <additional_attributes>390.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>275</y>
+      <w>451</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>308</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+gravity() : void</panel_attributes>
+    <additional_attributes>10.0;30.0;30.0;30.0;30.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>341</y>
+      <w>187</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+IAControlBot() : void</panel_attributes>
+    <additional_attributes>10.0;30.0;30.0;30.0;30.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>286</x>
+      <y>396</y>
+      <w>935</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>loop
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>396</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getBot()[] : MiniBot*</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>451</y>
+      <w>704</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+isDead : bool</panel_attributes>
+    <additional_attributes>620.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>297</x>
+      <y>451</y>
+      <w>891</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>case return false
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>473</y>
+      <w>693</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;610.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>539</y>
+      <w>451</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getPosition().y() : int</panel_attributes>
+    <additional_attributes>390.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>561</y>
+      <w>451</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>286</x>
+      <y>539</y>
+      <w>748</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>case positiony &lt;690
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>594</y>
+      <w>198</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+start(: int) : void</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>286</x>
+      <y>649</y>
+      <w>748</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>case life &gt; 0
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>671</y>
+      <w>451</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+_life
+</panel_attributes>
+    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>649</y>
+      <w>451</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getLife() : int</panel_attributes>
+    <additional_attributes>390.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>297</x>
+      <y>253</y>
+      <w>649</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>case return false
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>275</x>
+      <y>726</y>
+      <w>748</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>case positionx &lt;11000
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>726</y>
+      <w>451</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getPosition().x() : int</panel_attributes>
+    <additional_attributes>390.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>748</y>
+      <w>451</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>418</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+: Minibot*</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>594</y>
+      <w>242</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+sendUpdate() : void</panel_attributes>
+    <additional_attributes>10.0;40.0;80.0;40.0;80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

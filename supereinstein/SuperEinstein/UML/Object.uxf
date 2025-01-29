@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>891</x>
+      <y>418</y>
+      <w>363</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>MiniBot
+--
+- _moveRight : bool
+- _posWorld : Matrix*
+--
++ MiniBot( p : QPoint, posWorld : Matrtix*) : MiniBot
++ getLabel() : Qlabel*
++ getMoveRight() : bool
++ setMoveRight( b : bool) : void
++ thereIsHole(dir : direction) : bool
++ getId() : element
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>154</y>
+      <w>385</w>
+      <h>484</h>
+    </coordinates>
+    <panel_attributes>/Personn/
+--
+# _state : stateOfPersonn
+# _labelStates : QMap&lt; : stateOfPersonn, : Qlabel*&gt;
+# _isJumping : bool
+# _isOnFloor : bool
+# _life : int
+# _isTouch : bool
+--
++Personn(position : QPoint&amp;) : Personn
+# closeAndHide()
++setState(state : stateOfPlayer) : void
++ setIsJumping (isJumping : bool) : void
++ getIsJumping (isJumping : bool) : void
++ getIsJumping() : bool
++ getIsOnFloor() : bool
++ setIsOnFloor(b : bool) : void
+/+getLabel() : QLabel*/
++ movePersonn(dx : int, dy : int) : void
++ isDead() : bool
++ loseLife() : void
++ getHeart() : Qlabel*
++ getLife() : int
++ setLife(life : int) : void
++ /getId() : element/
++ setScaledSize(scale : QSize) : void
++ getIsTouch() : bool
+/+setIsTouch(b : bool) : void /
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>143</x>
+      <y>506</y>
+      <w>264</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>/Object/
+-
+#_position : QPoint
+# _XlengthHitBox : int
+# _YlengthHitBox : int
+# PointZero : QPoint
+-
++ Object(position : QPoint)
+# setPosition(newPos : QPoint) : void
++ getPosition : const QPoint
++ /getId() : element /
+getXlength() : const int&amp;
+getYlength(): const int&amp;
+# addPosiiton( addPos : QPoint) : void
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>803</x>
+      <y>660</y>
+      <w>308</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Floor
+-
++Floor(point : QPoint&amp;) : Floor
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1551</x>
+      <y>660</y>
+      <w>264</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>Data
+-
+-_inGame : vector&lt;*Object&gt;*
+-_player : *Player
+-
++Data(parent : QObject*)
++getPlayer : *Player
++getObject : vector&lt;*Object&gt;
+--
+&lt;&lt;slots&gt;&gt;
++dataUpdate() : void
+--
+&lt;&lt;signals&gt;&gt;
++SigUpdate(Player*,vector&lt;Object*&gt;
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>594</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>/QObject/
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>594</y>
+      <w>66</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>902</x>
+      <y>110</y>
+      <w>363</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+- _labelLife : QLabel*
+--
++ getLabel() : Qlabel*
++ isDead() : bool
++ getHeart() : QLabel
++ setIsTouch(b : bool) : void
++ getId() : element
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>836</x>
+      <y>187</y>
+      <w>88</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>836</x>
+      <y>506</y>
+      <w>77</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>550</y>
+      <w>88</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>660</y>
+      <w>297</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>/BaseElem/
+--
+# _texture : QPixmap
+--
++ BaseElem(point : QPoint) : BaseElem
++ getPixmap() : QPixmap*
++ setZero( zero : QPoint) : void
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>693</y>
+      <w>88</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>803</x>
+      <y>726</y>
+      <w>308</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Box
+-
++ Box(point : QPoint&amp;) : Box
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>803</x>
+      <y>792</y>
+      <w>308</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>UnderFloor
+-
++ UnderFloor( point : QPoint&amp;) : UnderFloor
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>748</x>
+      <y>671</y>
+      <w>77</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>748</x>
+      <y>737</y>
+      <w>77</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>748</x>
+      <y>759</y>
+      <w>77</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;50.0;20.0;50.0;20.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1254</x>
+      <y>176</y>
+      <w>539</w>
+      <h>506</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;470.0;10.0;470.0;440.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1243</x>
+      <y>506</y>
+      <w>374</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;10.0;320.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>770</y>
+      <w>957</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;850.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1364</x>
+      <y>297</y>
+      <w>363</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>Newton
+--
+-  _initPoint:QPoint
+--
++Newton(QPoint&amp; p,Matrix* posWorld) : Newton
++getId():element
++thereIsHole(UtilityGame::direction dir):bool
++setNewtonGif():void
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1243</x>
+      <y>440</y>
+      <w>143</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+</diagram>

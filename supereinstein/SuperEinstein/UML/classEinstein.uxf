@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>72</y>
+      <w>324</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+- _music : QSoundEffect*
+- _timer : QTimer*
+- _pTouchTimer : QTimer*
+- _data :  Data
+- _inView : InputView*
+- _task : UiEvent
+- _outView : OutputView*
+- YMaxJump : float
+- _onMenu : bool
+--
+- executionOfTask() : void
+- movePersonnLeft(move : int) : void
+- movePersonnRight(move : int) : void
+- PlayCanJump() : bool
+- PersonnCanMove(p : Personn*, keyMove : UiEvent)
+- gravity() : void
+- IAControlBot() : void
++ Controller() : Controller
++ show() : void
+--
++ integrate() : void
++ setTask() : void
++ start() : void
++ setVolume(: int) : void
++ playerIsNoTouch() : void
+--
++ sendUpdate() : void
++ showMenu() : void
++ gameOver() : void
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>594</y>
+      <w>243</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>Data
+-
+- _inGame : std::vector&lt;BaseElem*&gt;*
+-  _player : Player*
+- _element : Matrix*
+- _bots : std::vector&lt;MiniBot*&gt;*
+--
++Data(parent : QObject) : Data
++ getPlayer() : Player*
++ getBaseElem() : std::vector&lt;BaseElem*&gt;
++ getBot() : std::vector&lt;MiniBot*&gt;
++ playerFall() : void
++ BotIsDead (i : int ) : void
+--
++ dataUpdate() : void
++ reset() : void
++ init(d : difficulty) : void
+--
+- sigUpdate() : void
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>603</x>
+      <y>72</y>
+      <w>342</w>
+      <h>405</h>
+    </coordinates>
+    <panel_attributes>OutPutView
+--
+- _data : Data*
+- _Font : QPixmap*
+- _menu :Menu*
+- _heart : QPixmap*
+-_onMenu : bool
+- _showgameOver : bool
+- _gameoverPisxmap : QPixmap*
+- _touch : QLabel*
+- _timer : QTimer*
+- _scaleXFromBeg : double
+- _scaleXFromBeg : double
+--
++ OutputView(data : Data*, parent : QWidget) : OutputView
++ keyPressEvent(e : QKeyEvent) : void
++ keyReleaseEvent(e : QKeyEvent) : void
+# paintEvent( event : QPaintEvent*) : void
+--
++ sloStart() : void
++ showMenu() : void
++ gameOver() : void
+--
+ sigKeyPressed(QKeyEvent*) : void
+ sigKeyRleased(QKeyEvent*) : void
+ sigStart() : void
+ volume(int) : void
+ sigShowMenu() : void
+ sigDiff(UtilityGame::difficulty d) : void
+ sigReset() : void
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>693</y>
+      <w>243</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>InputView
+--
++ InputView(parent : QWidget) : InputView
+- keyPressEvent(e : QKeyEvent) : void
+- keyReleaseEvent(e : QKeyEvent) : void
+--
++ sloKeyPressed(e : QKeyEvent) : void
++ sloKeyReleased(e : QKeyEvent) : void
+--
++ UpPushed (: UiEvent) : void
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>477</y>
+      <w>468</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>500.0;130.0;500.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>279</y>
+      <w>126</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>297</x>
+      <y>477</y>
+      <w>27</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>837</x>
+      <y>468</y>
+      <w>27</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
