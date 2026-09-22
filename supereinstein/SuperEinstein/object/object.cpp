@@ -1,3 +1,51 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2fd43206822938d7f3144be25e357badf4d875eae1e1949fd9dffe75542ac598
-size 628
+#include "object.h"
+#include <cmath>
+
+Object::Object(QPoint& position) : QObject()
+{
+    PointZero = QPoint(ZERO_X_REL,ZERO_Y_REL);
+    _position = (position+PointZero);
+}
+
+Object::~Object()
+{
+
+}
+
+
+void Object::setPosition(QPoint newPosition)
+{
+    _position = newPosition ;
+}
+
+
+ element Object::getId()
+{
+
+}
+
+
+void Object::addPosition(QPoint addPos)
+{
+    _position += addPos;
+}
+
+
+const QPoint Object::getPosition()
+{
+    return _position;
+}
+
+
+const int& Object::getXlength()
+{
+    return  _XlengthHitBox;
+}
+
+const int& Object::getYlength()
+{
+    return  _YlengthHitBox;
+}
+
+
+
